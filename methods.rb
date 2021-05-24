@@ -19,23 +19,23 @@ end
 
 #予約人数
 def decide_quantity(chosen_plan)
-  puts "#{chosen_plan[:place]}ですね。"
+  puts "#{chosen_plan[:place]}旅行ですね。"
   puts "何名で予約されますか？"
   while true
     print "人数を入力 > "
-    reserve_number = gets.to_i
-    break if reserve_number >= 1
+    number_of_pople = gets.to_i
+    break if number_of_pople >= 1
     puts "1以上を入力して下さい。"
   end
-  reserve_number
+  number_of_pople
 end
 
 #合計金額
-def calcurate_charges(chosen_plan, reserve_number)
-  total_price = chosen_plan[:price] * reserve_number
+def calcurate_charges(chosen_plan, number_of_pople)
+  total_price = chosen_plan[:price] * number_of_pople
   discount_price = (total_price * 0.9).floor
-  if reserve_number >= 5
-    puts "#{reserve_number}名ですね。"
+  if number_of_pople >= 5
+    puts "#{number_of_pople}名ですね。"
     puts "5名以上ですので10%割引となります"
     puts  "合計料金は#{discount_price}円になります。"
   else

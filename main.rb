@@ -8,5 +8,5 @@ plans = [
 
 disp_plans(plans)
 chosen_plan = choose_plan(plans)
-reserve_number = decide_quantity(chosen_plan)
-calcurate_charges(chosen_plan, reserve_number)
+number_of_pople = decide_quantity(chosen_plan)
+calcurate_charges(chosen_plan, number_of_pople)
